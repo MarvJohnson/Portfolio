@@ -22,6 +22,7 @@ export default {
   nav {
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
   }
 
   .nav-top {
