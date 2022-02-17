@@ -45,6 +45,7 @@ export default {
 <style>
   nav {
     position: sticky;
+    height: 48px;
   }
 
   .nav-desktop {
@@ -107,6 +108,10 @@ export default {
     border: none;
     font-size: 2rem;
     color: var(--text1);
+  }
+
+  .hamburger.main {
+    padding: 0.5rem;
   }
 
   .hamburger.main.v-enter-active,
