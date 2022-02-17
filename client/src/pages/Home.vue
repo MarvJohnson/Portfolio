@@ -33,5 +33,5 @@ export default {
 </script>
 
 <style>
-
+@import url("../styles/global.css");
 </style>

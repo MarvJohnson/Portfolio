@@ -46,6 +46,10 @@
   --surface4: var(--surface4-light);
 }
 
+.hidden {
+  display: none;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
