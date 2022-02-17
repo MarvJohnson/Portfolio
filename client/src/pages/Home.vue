@@ -14,7 +14,7 @@
 <script>
 import Nav from '../components/Nav'
 import Profile from '../components/Profile'
-import Technologies from '../components/Techonologies'
+import Technologies from '../components/Technologies'
 import Projects from '../components/Projects'
 import Resume from '../components/Resume'
 import Footer from '../components/Footer'
