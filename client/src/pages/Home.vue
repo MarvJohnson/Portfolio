@@ -2,11 +2,12 @@
   <div class="home">
     <Nav />
     <main>
-
+      <Profile />
+      <Technologies />
+      <Projects />
+      <Resume />
     </main>
-    <footer>
-      
-    </footer>
+    <Footer />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import Profile from '../components/Profile'
 import Technologies from '../components/Techonologies'
 import Projects from '../components/Projects'
 import Resume from '../components/Resume'
+import Footer from '../components/Footer'
 
 export default {
   name: 'Home',
@@ -24,7 +26,8 @@ export default {
     Profile,
     Technologies,
     Projects,
-    Resume
+    Resume,
+    Footer
   }
 }
 </script>
