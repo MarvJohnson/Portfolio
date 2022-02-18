@@ -13,7 +13,8 @@
     "@fortawesome/free-regular-svg-icons": "^6.0.0",
     "@fortawesome/vue-fontawesome": "^3.0.0-5",
     "core-js": "^3.6.5",
-    "vue": "^3.0.0"
+    "vue": "^3.0.0",
+    "vue3-carousel": "^0.1.36"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.15",

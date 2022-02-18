@@ -33,5 +33,9 @@ export default {
 </script>
 
 <style>
-@import url("../styles/global.css");
+  @import url("../styles/global.css");
+
+  main {
+    max-width: 600px;
+  }
 </style>
