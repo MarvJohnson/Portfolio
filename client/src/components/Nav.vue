@@ -14,7 +14,7 @@
         </ul>
       </div>
     </Transition>
-    <div class="nav-desktop hidden">
+    <div class="nav-desktop">
       <div class="nav-top">
         <p>MJ</p>
       </div>
@@ -44,14 +44,17 @@ export default {
 
 <style>
   nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: sticky;
     height: 48px;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
   }
 
   .nav-desktop {
-    display: flex;
+    display: none;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(0, 0, 0, .2);
   }
 
   .nav-mobile {
@@ -103,6 +106,10 @@ export default {
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
   }
 
+  .nav-top p {
+    margin: 0;
+  }
+
   .hamburger {
     background-color: unset;
     border: none;
@@ -122,5 +129,16 @@ export default {
   .hamburger.main.v-enter-from,
   .hamburger.main.v-leave-to {
     opacity: 0;
+  }
+
+  @media screen and (min-width: 700px) {
+    .nav-mobile,
+    .hamburger {
+      display: none;
+    }
+
+    .nav-desktop {
+      display: flex;
+    }
   }
 </style>
