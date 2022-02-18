@@ -1,6 +1,6 @@
 <template>
   <div class="technology">
-    <font-awesome-icon :icon="icon"></font-awesome-icon>
+    <img :src="icon" alt="">
     <p>{{ label }}</p>
   </div>
 </template>
@@ -9,7 +9,7 @@
 export default {
   name: 'Technology',
   props: {
-    icon: Array,
+    icon: String,
     label: String
   }
 }
@@ -17,6 +17,13 @@ export default {
 
 <style>
   .technology {
+    display: grid;
+    grid-template-rows: 1fr 3rem;
     border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 0.5rem;
+  }
+
+  img {
+    width: 100%;
   }
 </style>

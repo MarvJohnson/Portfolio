@@ -9,6 +9,20 @@
 
 <script>
 import Technology from './Technology'
+import html from '../assets/html.png'
+import css from '../assets/css.png'
+import javascript from '../assets/javascriptbw.png'
+import git from '../assets/git.png'
+import django from '../assets/django.png'
+import express from '../assets/express-squared.png'
+import mongodb from '../assets/mongodb-icon-12.png'
+import mongoose from '../assets/mongoose.png'
+import node from '../assets/nodebw.png'
+import postgresql from '../assets/postgresql.png'
+import react from '../assets/reactbw.png'
+import redux from '../assets/redux.png'
+import sequelize from '../assets/sequelizebw.png'
+import vue from '../assets/vuebw.png'
 
 export default {
   name: 'Technologies',
@@ -17,18 +31,20 @@ export default {
   },
   data: () => ({
     technologies: [
-      { icon: ['fab', 'html5'], label: 'HTML5' },
-      { icon: ['fab', 'css3-alt'], label: 'CSS3' },
-      { icon: ['fab', 'node-js'], label: 'Javascript' },
-      { icon: ['fab', 'vuejs'], label: 'Vue' },
-      { icon: ['fab', 'react'], label: 'React' },
-      { icon: ['fab', 'trello'], label: 'Trello' },
-      { icon: ['fab', 'html5'], label: 'HTML5' },
-      { icon: ['fab', 'css3-alt'], label: 'CSS3' },
-      { icon: ['fab', 'node-js'], label: 'Javascript' },
-      { icon: ['fab', 'html5'], label: 'HTML5' },
-      { icon: ['fab', 'css3-alt'], label: 'CSS3' },
-      { icon: ['fab', 'node-js'], label: 'Javascript' },
+      { icon: html, label: 'HTML5' },
+      { icon: css, label: 'CSS3' },
+      { icon: javascript, label: 'Javascript' },
+      { icon: node, label: 'Node.js' },
+      { icon: express, label: 'Express.js' },
+      { icon: django, label: 'Django' },
+      { icon: mongodb, label: 'MongoDB' },
+      { icon: postgresql, label: 'PostgreSQL' },
+      { icon: git, label: 'Git' },
+      { icon: react, label: 'React' },
+      { icon: redux, label: 'Redux' },
+      { icon: sequelize, label: 'Sequelize' },
+      { icon: vue, label: 'Vue' },
+      { icon: mongoose, label: 'Mongoose' },
     ]
   })
 }
