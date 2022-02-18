@@ -1,16 +1,14 @@
 <template>
   <div class="profile">
-    <img src="" alt="">
+    <img src="@/assets/portrait.png" alt="">
     <h2>Marvel Johnson</h2>
     <h3>Title</h3>
     <p>Full-Stack Web Developer</p>
-    <h2>Background</h2>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error veniam vel animi cum nihil ab possimus mollitia repellendus et, reiciendis illum fugiat iste debitis tempore dolore aliquam? Incidunt, magnam ratione.
+    <h3>Background</h3>
+    <p class="background-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error veniam vel animi cum nihil ab possimus mollitia repellendus et, reiciendis illum fugiat iste debitis tempore dolore aliquam? Incidunt, magnam ratione.
     Quidem quis, ad reiciendis velit doloribus explicabo corrupti provident sequi soluta doloremque recusandae odio quibusdam praesentium, harum rem. Tempora, facere voluptate voluptatibus obcaecati doloribus possimus quisquam ex unde asperiores est.
-    Quis atque nihil deleniti, aliquam porro laudantium exercitationem, dolor odio ipsa veritatis, repellat qui placeat iste velit molestiae ea beatae nostrum harum eos facilis quasi? Doloribus fugit excepturi vero aut?
-    Quisquam similique repellat eveniet consequuntur unde distinctio culpa labore nulla eos, maiores, voluptates quo possimus nihil molestias ullam ratione, excepturi suscipit rerum alias ipsa? Error aut aliquid minima similique incidunt.
-    Iste, nesciunt possimus? Ipsam at perferendis expedita excepturi ad, exercitationem maxime necessitatibus in dolore eaque distinctio asperiores quaerat sapiente. Beatae, iusto facere cupiditate consectetur voluptatum odit facilis fugiat rem nobis.</p>
-    <button>Resume</button>
+    Quis atque nihil deleniti, aliquam porro laudantium exercitationem, dolor odio ipsa veritatis, repellat qui placeat iste velit molestiae ea beatae nostrum harum eos facilis quasi? Doloribus fugit excepturi vero aut?</p>
+    <button class="resume-btn">Resume</button>
     <a href="#" class="fa fa-brands fa-linkedin"></a>
     <a href="#" class="fa fa-brands fa-github"></a>
   </div>
@@ -24,6 +22,29 @@ export default {
 
 <style>
   .profile {
-    border: 1px solid rgba()
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+
+  img {
+    border-radius: 50%;
+    border: 1px solid #000;
+  }
+
+  .resume-btn {
+    display: block;
+    margin-top: 5em;
+    width: 100%;
+    height: 2em;
+  }
+
+  h3,
+  p {
+    margin: 0;
+  }
+
+  .background-text {
+    text-align: justify;
   }
 </style>
