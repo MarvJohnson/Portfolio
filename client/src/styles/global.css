@@ -87,3 +87,13 @@
 body {
   margin: 0;
 }
+
+.padder {
+  padding: 0 1rem;
+}
+
+.section-label {
+  border-bottom: 1px solid var(--surface1);
+  padding-bottom: 0.2em;
+  margin: 1em;
+}

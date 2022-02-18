@@ -9,7 +9,7 @@
 export default {
   name: 'Technology',
   props: {
-    icon: String,
+    icon: Array,
     label: String
   }
 }

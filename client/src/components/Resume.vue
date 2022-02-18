@@ -1,7 +1,10 @@
 <template>
   <div class="resume">
-    <img src="@/assets/resume.png" alt="">
-    <button @click="downloadResume">Download</button>
+    <h3 class="section-label">Resume</h3>
+    <div class="padder">
+      <img src="@/assets/resume.png" alt="">
+      <button @click="downloadResume">Download</button>
+    </div>
   </div>
 </template>
 
@@ -26,10 +29,6 @@ export default {
 </script>
 
 <style scoped>
-  .resume {
-    padding: 0 1em;
-  }
-
   img {
     width: 100%;
   }

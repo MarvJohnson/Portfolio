@@ -2,12 +2,19 @@
   <div class="profile">
     <img src="@/assets/portrait.png" alt="">
     <h2>Marvel Johnson</h2>
-    <h3>Title</h3>
-    <p>Full-Stack Web Developer</p>
-    <h3>Background</h3>
-    <p class="background-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error veniam vel animi cum nihil ab possimus mollitia repellendus et, reiciendis illum fugiat iste debitis tempore dolore aliquam? Incidunt, magnam ratione.
-    Quidem quis, ad reiciendis velit doloribus explicabo corrupti provident sequi soluta doloremque recusandae odio quibusdam praesentium, harum rem. Tempora, facere voluptate voluptatibus obcaecati doloribus possimus quisquam ex unde asperiores est.
-    Quis atque nihil deleniti, aliquam porro laudantium exercitationem, dolor odio ipsa veritatis, repellat qui placeat iste velit molestiae ea beatae nostrum harum eos facilis quasi? Doloribus fugit excepturi vero aut?</p>
+    <div class="profile-section">
+      <h3>Title</h3>
+      <p>Full-Stack Web Developer</p>
+    </div>
+    <div class="profile-section">
+      <h3>Background</h3>
+      <p class="background-text">
+        I am a software engineer in pursuit of providing meaningful experiences at scale and driven by a passion for programming.
+      </p>
+      <p class="background-text">My work as a banker helped nurture an obsession for providing service as it pertains to individuals and their specific needs.
+        This resulted in greater creativity when it comes to working through unique predicaments. The time I spent in a management role heightened my aptitude towards teamwork, strengthened my skill at delegating tasks, and improved my interpersonal relationship development competency.</p>
+    </div>
+
     <button class="resume-btn">Resume</button>
     <a href="#" class="fa fa-brands fa-linkedin"></a>
     <a href="#" class="fa fa-brands fa-github"></a>
@@ -27,7 +34,13 @@ export default {
     border: 1px solid rgba(0, 0, 0, 0.5);
   }
 
+  .profile-section + .profile-section {
+    margin-top: 1em;
+  }
+
   img {
+    display: block;
+    margin: 0 auto;
     border-radius: 50%;
     border: 1px solid #000;
   }
@@ -46,5 +59,9 @@ export default {
 
   .background-text {
     text-align: justify;
+  }
+
+  .background-text + .background-text {
+    margin-top: 1em;
   }
 </style>

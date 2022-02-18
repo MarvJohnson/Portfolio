@@ -1,6 +1,6 @@
 <template>
   <div class="projects">
-    <h3>Projects</h3>
+    <h3 class="section-label">Projects</h3>
     <carousel :settings="carouselSettings">
       <slide v-for="slide in 10" :key="slide">
         {{ slide }}
@@ -35,12 +35,6 @@ export default {
 </script>
 
 <style>
-  .projects > h3 {
-    border-bottom: 1px solid var(--surface1);
-    padding-bottom: 0.2em;
-    margin: 1em;
-  }
-
   .carousel__next,
   .carousel__prev {
     display: none;
