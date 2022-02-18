@@ -1,6 +1,7 @@
 <template>
   <div class="resume">
-
+    <img src="@/assets/resume.png" alt="">
+    <a href="@/assets" download="resume"><button>Download</button></a>
   </div>
 </template>
 
@@ -10,6 +11,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+  .resume {
+    padding: 0 1em;
+  }
 
+  img {
+    width: 100%;
+  }
 </style>

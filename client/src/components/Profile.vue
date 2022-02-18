@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .profile {
     margin: 1rem;
     padding: 1rem;
