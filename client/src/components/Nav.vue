@@ -1,16 +1,24 @@
 <template>
-  <nav>
+  <nav class="surface1">
     <Transition>
-      <button class="hamburger main fas fa-bars" @click="toggleMobileSlideout" v-if="!navMobileSlideout"></button>
+      <div class="hamburger main" @click="toggleMobileSlideout" v-if="!navMobileSlideout">
+        <div class="hamburger-segment"></div>
+        <div class="hamburger-segment"></div>
+        <div class="hamburger-segment"></div>
+      </div>
     </Transition>
     <Transition>
-      <div class="nav-mobile surface1" @click="toggleMobileSlideout" v-if="navMobileSlideout">
-        <button class="hamburger fas fa-bars"></button>
+      <div class="nav-mobile surface1" v-if="navMobileSlideout">
+        <div class="hamburger" @click="toggleMobileSlideout">
+          <div class="hamburger-segment"></div>
+          <div class="hamburger-segment"></div>
+          <div class="hamburger-segment"></div>
+        </div>
         <ul class="nav-options">
-          <li><a href="#">About Me</a></li>
-          <li><a href="#">Technologies</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Resume</a></li>
+          <li><a href="#profile-anchor" @click="toggleMobileSlideout">Profile</a></li>
+          <li><a href="#technologies-anchor" @click="toggleMobileSlideout">Technologies</a></li>
+          <li><a href="#projects-anchor" @click="toggleMobileSlideout">Projects</a></li>
+          <li><a href="#resume-anchor" @click="toggleMobileSlideout">Resume</a></li>
         </ul>
       </div>
     </Transition>
@@ -19,10 +27,10 @@
         <p>MJ</p>
       </div>
       <div class="nav-options">
-        <a href="#">Profile</a>
-        <a href="#">Technologies</a>
-        <a href="#">Resume</a>
-        <a href="#">About</a>
+        <a href="#profile-anchor">Profile</a>
+        <a href="#technologies-anchor">Technologies</a>
+        <a href="#projects-anchor">Projects</a>
+        <a href="#resume-anchor">Resume</a>
       </div>
     </div>
   </nav>
@@ -55,10 +63,26 @@ export default {
   .nav-desktop {
     display: none;
     justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  .nav-desktop .nav-options {
+    font-size: 1.3rem;
+    padding-right: 1rem;
+  }
+
+  .nav-desktop .nav-options a {
+    color: var(--text1);
+    text-decoration: none;
+  }
+
+  .nav-desktop .nav-options a + a {
+    margin-left: 1rem;
   }
 
   .nav-mobile {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 95vw;
@@ -103,18 +127,33 @@ export default {
   }
 
   .nav-top {
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    width: 3rem;
+    height: 100%;
   }
 
   .nav-top p {
     margin: 0;
+    font-size: 1.5rem;
   }
 
   .hamburger {
-    background-color: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border: none;
-    font-size: 2rem;
+    height: 1.7rem;
+    width: 2rem;
     color: var(--text1);
+  }
+
+  .hamburger-segment {
+    height: 1rem;
+    transform: scaleY(0.5);
+    background-color: white;
   }
 
   .hamburger.main {

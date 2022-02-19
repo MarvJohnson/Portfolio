@@ -3,9 +3,15 @@
     <Nav />
     <main>
       <Profile />
-      <Technologies />
-      <Projects />
-      <Resume />
+      <section>
+        <Technologies />
+      </section>
+      <section>
+        <Projects />
+      </section>
+      <section>
+        <Resume />
+      </section>
     </main>
     <Footer />
   </div>
@@ -36,7 +42,11 @@ export default {
   @import url("../styles/global.css");
 
   main {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
+  }
+
+  section {
+    margin: 10rem 0;
   }
 </style>

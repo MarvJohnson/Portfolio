@@ -14,9 +14,11 @@ export default {
   footer {
     display: flex;
     justify-content: center;
+    font-style: italic;
     align-items: center;
-    margin-top: 1rem;
+    margin-top: 5rem;
     height: 4rem;
+    color: var(--text2);
   }
 
   footer p {

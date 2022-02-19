@@ -1,5 +1,5 @@
 <template>
-  <div class="technologies">
+  <div id="technologies-anchor" class="technologies">
     <h3 class="section-label">Technologies I know</h3>
     <div class="padder">
       <Technology v-for="(technology, index) in technologies" :key="index" :icon="technology.icon" :label="technology.label" />

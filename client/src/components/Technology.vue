@@ -19,7 +19,7 @@ export default {
   .technology {
     display: grid;
     grid-template-rows: 1fr 3rem;
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--surface2);
     padding: 0.5rem;
   }
 
