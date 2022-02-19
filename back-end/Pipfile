@@ -10,6 +10,7 @@ djangorestframework = "*"
 django-cors-headers = "*"
 djoser = "*"
 djangorestframework-simplejwt = "*"
+dj-database-url = "*"
 
 [dev-packages]
 
