@@ -12,7 +12,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import dj_database_url
+from dotenv import load_dotenv
 import os
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,7 +30,7 @@ SECRET_KEY = os.environ.get('SECURITY_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('MODE') == 'dev'
 
-ALLOWED_HOSTS = ['http://localhost:8000', 'http://127.0.0.1:8000']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -41,7 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'djoser',
-    'corsheaders'
+    'corsheaders',
+    'portfolio'
 ]
 
 MIDDLEWARE = [
@@ -63,7 +67,11 @@ REST_FRAMEWORK = {
 
 SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('JWT',),
+    'SIGNING_KEY': os.environ.get('JWT_SIGNING_KEY'),
+    'BLACKLIST_AFTER_ROTATION': False,
 }
+
+AUTH_USER_MODEL = 'portfolio.User'
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:8080',
@@ -141,7 +149,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = 'static/'
+STATIC_ROOT = Path(BASE_DIR, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

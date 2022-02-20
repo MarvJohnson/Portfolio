@@ -11,6 +11,8 @@ django-cors-headers = "*"
 djoser = "*"
 djangorestframework-simplejwt = "*"
 dj-database-url = "*"
+python-dotenv = "*"
+djangorestframework-recursive = "*"
 
 [dev-packages]
 
