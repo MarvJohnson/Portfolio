@@ -15,10 +15,14 @@
           <div class="hamburger-segment"></div>
         </div>
         <ul class="nav-options">
+          <li><router-link to="/">Home</router-link></li>
           <li><a href="#profile-anchor" @click="toggleMobileSlideout">Profile</a></li>
           <li><a href="#technologies-anchor" @click="toggleMobileSlideout">Technologies</a></li>
           <li><a href="#projects-anchor" @click="toggleMobileSlideout">Projects</a></li>
           <li><a href="#resume-anchor" @click="toggleMobileSlideout">Resume</a></li>
+          <li>
+            <router-link to="/blog">Blog</router-link>
+          </li>
         </ul>
       </div>
     </Transition>
@@ -27,10 +31,12 @@
         <p>MJ</p>
       </div>
       <div class="nav-options">
+        <router-link to="/">Home</router-link>
         <a href="#profile-anchor">Profile</a>
         <a href="#technologies-anchor">Technologies</a>
         <a href="#projects-anchor">Projects</a>
         <a href="#resume-anchor">Resume</a>
+        <router-link to="/blog">Blog</router-link>
       </div>
     </div>
   </nav>
