@@ -6,7 +6,13 @@
 
 <script>
 export default {
+  name: 'Blog',
+  mounted(){
 
+  },
+  methods: {
+    
+  }
 }
 </script>
 
