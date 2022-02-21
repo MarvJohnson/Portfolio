@@ -5,11 +5,19 @@ from .serializers import UserSerializer, CommentSerializer, PostSerializer
 
 # Create your views here.
 
-class Test(APIView):
+class PostList(APIView):
   queryset = Post.objects.all()
 
   def get(self, request):
-    post = self.queryset.get()
-    data = PostSerializer(post).data
-    return Response(data)
+    posts = list(self.queryset.all())
+    posts = [PostSerializer(post).data['title'] for post in posts]
+    return Response(posts)
+
+class PostDetail(APIView):
+  queryset = Post.objects.all()
+
+  def get(self, request, pk):
+    post = self.queryset.get(id=pk)
+    post = PostSerializer(post).data
+    return Response(post)
 
