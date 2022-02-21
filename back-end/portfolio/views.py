@@ -9,9 +9,14 @@ class PostList(APIView):
   queryset = Post.objects.all()
 
   def get(self, request):
-    posts = list(self.queryset.all())
-    posts = [PostSerializer(post).data['title'] for post in posts]
-    return Response(posts)
+    all_queryset_posts = list(self.queryset.all())
+    serialized_posts = []
+
+    for post in all_queryset_posts:
+      serialized_post = PostSerializer(post).data
+      serialized_posts.append({ 'id': serialized_post['id'], 'title': serialized_post['title'] })
+    
+    return Response(serialized_posts)
 
 class PostDetail(APIView):
   queryset = Post.objects.all()
