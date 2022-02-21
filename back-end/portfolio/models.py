@@ -61,6 +61,7 @@ class Post(models.Model):
     return self.title
 
 class PostSection(models.Model):
+  title = models.CharField(max_length=100)
   post = models.ForeignKey(
     Post,
     related_name='sections',

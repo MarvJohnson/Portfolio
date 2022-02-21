@@ -35,7 +35,7 @@ class TempPostSectionSerializer(serializers.ModelSerializer):
   
   class Meta:
     model = PostSection
-    fields = ('contents',)
+    fields = ('title', 'contents',)
 
 class PostSerializer(serializers.ModelSerializer):
   sections = TempPostSectionSerializer(many=True)
@@ -49,7 +49,7 @@ class PostSectionSerializer(serializers.ModelSerializer):
   
   class Meta:
     model = PostSection
-    fields = ('contents')
+    fields = ('title', 'contents')
 
 class PostSectionContentSerializer(serializers.ModelSerializer):
   class Meta:
