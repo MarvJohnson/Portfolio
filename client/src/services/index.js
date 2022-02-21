@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const BASE_URL =
   process.env.VUE_APP_MODE === 'prod'
-    ? `${window.location.origin}/api/v1/`
+    ? `https://mj-portfolio-back-end.herokuapp.com/`
     : 'http://localhost:8000/';
 
 const Client = axios.create({
