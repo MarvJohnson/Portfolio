@@ -15,14 +15,14 @@
           <div class="hamburger-segment"></div>
         </div>
         <ul class="nav-options">
-          <li><router-link to="/">Home</router-link></li>
-          <li><a href="#profile-anchor" @click="toggleMobileSlideout">Profile</a></li>
-          <li><a href="#technologies-anchor" @click="toggleMobileSlideout">Technologies</a></li>
-          <li><a href="#projects-anchor" @click="toggleMobileSlideout">Projects</a></li>
-          <li><a href="#resume-anchor" @click="toggleMobileSlideout">Resume</a></li>
+          <li><router-link to="/" @click="toggleMobileSlideout">Home</router-link></li>
           <li>
-            <router-link to="/blog">Blog</router-link>
+            <router-link to="/blog" @click="toggleMobileSlideout">Blog</router-link>
           </li>
+          <li v-if="isOnHomePage"><a href="#profile-anchor" @click="toggleMobileSlideout">Profile</a></li>
+          <li v-if="isOnHomePage"><a href="#technologies-anchor" @click="toggleMobileSlideout">Technologies</a></li>
+          <li v-if="isOnHomePage"><a href="#projects-anchor" @click="toggleMobileSlideout">Projects</a></li>
+          <li v-if="isOnHomePage"><a href="#resume-anchor" @click="toggleMobileSlideout">Resume</a></li>
         </ul>
       </div>
     </Transition>
@@ -32,11 +32,11 @@
       </div>
       <div class="nav-options">
         <router-link to="/">Home</router-link>
-        <a href="#profile-anchor">Profile</a>
-        <a href="#technologies-anchor">Technologies</a>
-        <a href="#projects-anchor">Projects</a>
-        <a href="#resume-anchor">Resume</a>
         <router-link to="/blog">Blog</router-link>
+        <a href="#profile-anchor" v-if="isOnHomePage">Profile</a>
+        <a href="#technologies-anchor" v-if="isOnHomePage">Technologies</a>
+        <a href="#projects-anchor" v-if="isOnHomePage">Projects</a>
+        <a href="#resume-anchor" v-if="isOnHomePage">Resume</a>
       </div>
     </div>
   </nav>
@@ -51,6 +51,11 @@ export default {
   methods: {
     toggleMobileSlideout(){
       this.navMobileSlideout = !this.navMobileSlideout;
+    }
+  },
+  computed: {
+    isOnHomePage(){
+      return this.$route.name === 'home'
     }
   }
 }

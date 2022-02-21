@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <Nav />
     <main>
       <Profile />
       <section>
@@ -13,27 +12,22 @@
         <Resume />
       </section>
     </main>
-    <Footer />
   </div>
 </template>
 
 <script>
-import Nav from '../components/Nav'
 import Profile from '../components/Profile'
 import Technologies from '../components/Technologies'
 import Projects from '../components/Projects'
 import Resume from '../components/Resume'
-import Footer from '../components/Footer'
 
 export default {
   name: 'Home',
   components: {
-    Nav,
     Profile,
     Technologies,
     Projects,
     Resume,
-    Footer
   }
 }
 </script>
