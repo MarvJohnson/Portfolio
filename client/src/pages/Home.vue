@@ -38,9 +38,7 @@ export default {
 }
 </script>
 
-<style>
-  @import url("../styles/global.css");
-
+<style scoped>
   main {
     max-width: 800px;
     margin: 0 auto;
