@@ -5,7 +5,7 @@
         <h1>{{ blogPost.title }}</h1>
       </div>
       <section v-for="(section, sectionIndex) in blogPost.sections" :key="sectionIndex">
-        <h3>{{ section.title }}</h3>
+        <h3 v-if="section.title">{{ section.title }}</h3>
         <BlogPostContent v-for="(content, contentIndex) in section.contents" :key="contentIndex" :contentInfo="content" />
       </section>
     </div>
