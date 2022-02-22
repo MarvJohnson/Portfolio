@@ -3,7 +3,6 @@
     <div class="post-container">
       <div class="description-container">
         <h1>{{ blogPost.title }}</h1>
-        <h2>{{ blogPost.topic }}</h2>
       </div>
       <section v-for="(section, sectionIndex) in blogPost.sections" :key="sectionIndex">
         <h3>{{ section.title }}</h3>
