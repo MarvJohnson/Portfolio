@@ -5,8 +5,9 @@
         <h1>{{ blogPost.title }}</h1>
       </div>
       <section v-for="(section, sectionIndex) in blogPost.sections" :key="sectionIndex">
-        <h3 v-if="section.title">{{ section.title }}</h3>
+        <h2 v-if="section.title">{{ section.title }}</h2>
         <BlogPostContent v-for="(content, contentIndex) in section.contents" :key="contentIndex" :contentInfo="content" />
+        <hr v-if="sectionIndex < blogPost.sections.length - 1">
       </section>
     </div>
   </div>
@@ -38,6 +39,10 @@ export default {
 </script>
 
 <style scoped>
+  section {
+    margin: 3rem 0;
+  }
+
   .blog-detail {
     min-height: 100vh;
   }
@@ -56,11 +61,7 @@ export default {
   }
 
   h2 {
-    font-size: 0.9rem;
-  }
-
-  h3 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
   }
 

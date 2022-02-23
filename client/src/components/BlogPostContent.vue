@@ -49,6 +49,10 @@ export default {
 </script>
 
 <style scoped>
+  p {
+    color: var(--text1);
+  }
+
   pre {
     background-color: var(--surface2);
     border-radius: 10px;
