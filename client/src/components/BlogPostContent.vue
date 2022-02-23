@@ -61,4 +61,10 @@ export default {
     white-space: pre-wrap;
     word-wrap: break-word;
   }
+
+  img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: scale-down;
+  }
 </style>
