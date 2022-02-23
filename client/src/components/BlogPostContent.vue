@@ -22,7 +22,6 @@ export default {
       if (!paragraph) return;
 
       let content = this.contentInfo.content;
-      content = content.replace(/\(([\w\d\s]+)\)\[(.+)\]/gm, '<a href="$2" target="_blank">$1</a>');
       const lists = [...content.matchAll(/(?<!\(.*\))\[(.*)]/gm)];
 
       if (lists.length > 0) {
@@ -40,6 +39,8 @@ export default {
           content = content.replace(lists[i][0], list);
         }
       }
+
+      content = content.replace(/\(([\w\d\s]+)\)\[([\w\d\s/:.%\-~#=]+)\]/gm, '<a href="$2" target="_blank">$1</a>');
 
       // console.log(content);
       paragraph.innerHTML = content;
